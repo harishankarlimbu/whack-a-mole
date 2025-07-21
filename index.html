@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <h1>Whack-a-Mole Game</h1>
+  <p>About Game: Hit Mole in 15 seconds and check your score</p>
+
+  <h2 id="time">Time Remaining: 0</h2>
+  <h2 id="score">Your Score: 0</h2>
+  <button id="start-button">Start Game</button>
+  <!-- Game Over Box -->
+<div id="game-over-box" class="hidden">
+  <div class="game-over-content">
+    <h2>Game Over!</h2>
+    <p id="final-score-text">Your final score: 0</p>
+    <button id="close-popup-btn">Close</button>
+  </div>
+</div>
+
+
+  <div id="whack-a-mole">
+    <div class="hole" id="hole1"></div>
+    <div class="hole" id="hole2"></div>
+    <div class="hole" id="hole3"></div>
+    <div class="hole" id="hole4"></div>
+    <div class="hole" id="hole5"></div>
+    <div class="hole" id="hole6"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

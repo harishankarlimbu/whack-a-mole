@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+}
+
+/* Background image perfectly contained and centered */
+body {
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* ensures full 16:9 shows */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Game title and description */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 2px 2px 8px #000;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #ddd;
+  text-shadow: 1px 1px 4px #000;
+  margin-bottom: 20px;
+}
+
+/* Score and time */
+#score, #time {
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+  margin-bottom: 10px;
+}
+
+/* Start button */
+#start-button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#start-button:hover {
+  background-color: #218838;
+}
+
+/* Fixed 16:9 Game Area (1280x720) */
+#whack-a-mole {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 20px;
+  user-select: none;
+}
+
+/* Shared hole styling */
+.hole {
+  width: 100px;
+  height: 100px;
+  background-image: url("images/hole.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  transition: background 0.2s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Individual hole positions with % */
+#hole1 {
+  top: 41%;
+  left: -2%;
+}
+
+#hole2 {
+  top: 14%;
+  left: 58.6%;
+}
+
+#hole3 {
+  top: 4.4%;
+  left: 23.4%;
+}
+
+#hole4 {
+  top: -17%; 
+  left: 93.7%;
+}
+
+#hole5 {
+  top: 45%;
+  left: 42.2%;
+}
+
+#hole6 {
+  top: 35.6%;
+  left: 74.1%;
+}
+
+/* When mole appears */
+.hole.mole {
+  background-image: url("images/mole.png");
+}
+
+/* Hit effect */
+.hit {
+  background-color: red !important;
+  background-image: none !important;
+}
+
+/* Game Over Box */
+#game-over-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(188, 145, 145);
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 100;
+}
+
+.game-over-content {
+  text-align: center;
+}
+
+#game-over-box.hidden {
+  display: none;
+}
